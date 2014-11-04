@@ -34,15 +34,22 @@ public class Meter {
 	}
 	
 	public long getAverageValue() {
-		return getValueSum()/readings.size();
+		if (readings.size() != 0) {
+			return getValueSum()/readings.size();
+			
+		}
+		else {
+			return 0;
+		}
 	}
-	
-
 
 	public void addReading(Reading reading){
 		this.readings.add(reading);
 	}
 	
+	public ArrayList<Reading> getReadings(){
+		return this.readings;
+	}
 	public String toString(){
 		return "******"+meterID+"*********\n"+printReadings();
 	}

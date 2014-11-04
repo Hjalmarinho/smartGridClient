@@ -1,8 +1,10 @@
 package model;
 
+import java.util.Calendar;
+
 public class Reading {
 
-	private String timeStamp;
+	private Calendar timeStamp;
 	private long value;
 	private String readingType;
 
@@ -13,16 +15,16 @@ public class Reading {
 	 * @param value
 	 * @param type
 	 */
-	public Reading(String timeStamp, long value){
+	public Reading(Calendar timeStamp, long value){
 		this.timeStamp = timeStamp;
 		this.value = value;
 	}
 	
-	public String getTimeStamp(){
+	public Calendar getTimeStamp(){
 		return this.timeStamp;
 	}
 	
-	public void setTimeStamp(String timeStamp){
+	public void setTimeStamp(Calendar timeStamp){
 		this.timeStamp = timeStamp;
 	}
 	
